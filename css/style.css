@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=League+Spartan:wght@100;400&family=Oswald:wght@300&family=Plus+Jakarta+Sans:wght@200&family=Roboto:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body{
+    background: linear-gradient(to right, #FDF6EC, #B7CADB);
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px) ;
+
+}
+
+.grid-container button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #eee;
+    
+}
+
+.grid-container button:hover{
+    background-color: #eee;
+    color: #111;
+}
+
+.grid-container .operator{
+    background: #B7CADB ;
+}
+
+.span-two{
+    grid-column: span 2;
+
+} 
+
+.output{
+    grid-column: 1/-1;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+    color: rgba(225, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
